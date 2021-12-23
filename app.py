@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request, send_from_directory
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array, load_img
-from tensorflow import expand_dims
-import numpy as np
 import os
 import cv2
 
@@ -44,8 +42,6 @@ def pred_image(path):
     img = img.reshape(1,64,64,3)
 
     prob = model.predict(img)
-    print(prob[0])
-    print(prob[0][0])
     if prob[0][0] > 0.5 :
         prob_image = 1
         percentage = round((prob[0][0])*100,1)
