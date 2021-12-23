@@ -2,6 +2,4 @@ flask
 tensorflow-cpu
 gunicorn
 pillow
-open-cv
-cv2
 numpy
