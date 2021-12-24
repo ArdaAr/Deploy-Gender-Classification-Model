@@ -3,4 +3,3 @@ tensorflow-cpu
 gunicorn
 numpy
 opencv-python
-cv2
